@@ -1,0 +1,16 @@
+import BreadcrumbFunction from "@/components/Breadcrumb/BreadcrumbFunction";
+import InventoryManagement from "@/views/private/management/inventory/InventoryManagement";
+import { useTranslations } from "next-intl";
+import React from "react";
+
+export default function page() {
+  const t: any = useTranslations();
+  return (
+    <>
+      <BreadcrumbFunction functionName={t('functionCategory.Inventory')} title={t('detailFunction.Inventory Management')} />
+      <div>
+        <InventoryManagement />
+      </div>
+    </>
+  );
+}

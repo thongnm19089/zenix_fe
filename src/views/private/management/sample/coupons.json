@@ -1,0 +1,27 @@
+[
+    {
+      "code": "DISCOUNT10",
+      "discount_percentage": 10,
+      "expiration_date": "2024-12-31",
+      "remaining_quantity": 100
+    },
+    {
+      "code": "DISCOUNT20",
+      "discount_percentage": 20,
+      "expiration_date": "2024-10-31",
+      "remaining_quantity": 50
+    },
+    {
+      "code": "SAVE50",
+      "discount_amount": 50000,
+      "expiration_date": "2024-11-30",
+      "remaining_quantity": 20
+    },
+    {
+      "code": "VIP30",
+      "discount_percentage": 30,
+      "expiration_date": "2024-09-30",
+      "remaining_quantity": 10
+    }
+  ]
+  

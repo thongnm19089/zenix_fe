@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+	font-family: "Inter", sans-serif;
+}
+
+.login-card {
+	width: 420px;
+	padding: 40px 32px;
+	border-radius: 24px;
+	background: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(16px);
+	box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo {
+	margin-bottom: 32px;
+}
+
+.login-form {
+	width: 100%;
+}
+
+.ant-input-affix-wrapper {
+	border-radius: 12px !important;
+}
+
+.ant-input-affix-wrapper:focus-within {
+	border-color: #f1692f !important;
+	box-shadow: 0 0 0 2px rgba(241, 105, 47, 0.2);
+}
+
+.btn-primary {
+	background: linear-gradient(135deg, #f1692f, #ff8c42);
+	border: none;
+	border-radius: 14px;
+	font-weight: 600;
+	box-shadow: 0 10px 25px rgba(241, 105, 47, 0.45);
+}
+
+.btn-primary:hover {
+	opacity: 0.95;
+}
+
+.forgot {
+	text-align: right;
+	margin: 10px 0 20px;
+	color: #f1692f;
+	cursor: pointer;
+	font-weight: 500;
+}
+
+.btn-google {
+	border-radius: 14px;
+	border: 1.5px solid #ddd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	font-weight: 600;
+}
+
+.btn-google:hover {
+	border-color: #f1692f;
+	color: #f1692f;
+}
+
+.footer-links {
+	margin-top: 32px;
+	display: flex;
+	justify-content: space-between;
+	font-weight: 500;
+	color: #f1692f;
+}
+
+.footer-links span {
+	cursor: pointer;
+}
+
+.error-text {
+	color: #e53935;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,379 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./index.css";
+
+.btn {
+  @apply inline-flex h-9 cursor-pointer items-center justify-center rounded-md bg-transparent px-2 text-sm font-medium transition-colors hover:bg-zinc-100 focus:outline-none focus:bg-zinc-100 active:scale-95 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-transparent dark:text-zinc-100 dark:hover:bg-zinc-800 dark:hover:text-zinc-100 dark:focus:bg-zinc-800 dark:focus:ring-zinc-400 dark:focus:ring-offset-zinc-900 dark:data-[state=open]:bg-transparent;
+}
+
+.custom-edit-button {
+  background-color: #ff9800;
+  /* This is an orange color similar to Bootstrap's warning color */
+  color: #fff;
+  /* White text color */
+  border: none;
+  /* Removing default border */
+}
+
+.custom-edit-button:hover {
+  background-color: #e68900;
+  /* A darker shade for hover */
+  color: #fff !important;
+  /* White text color */
+}
+
+.sku-item .ant-form-item-row {
+  justify-content: end;
+}
+
+.ant-popconfirm .ant-popconfirm-buttons button {
+  margin-inline-end: 8px !important;
+  margin-inline-start: 0px !important;
+}
+
+.nav_link-home:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #f1692f;
+  left: 0;
+  top: 1.8rem;
+  animation-name: navborder;
+  animation-duration: 0.8s;
+}
+
+@keyframes navborder {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.ant-picker-dropdown {
+  z-index: 2000 !important;
+}
+
+.bg-input input {
+  background-color: inherit;
+}
+
+.ant-table-footer {
+  padding: 0px !important;
+}
+
+.bg-card-task::before {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-full bg-gray-200 opacity-20 z-[-1];
+}
+
+.bg-pricing-card {
+  background-color: white;
+  border: 2px solid white;
+  box-sizing: border-box;
+  transition: background-color 0.7s, background-image 0.7s, width 0.7s, height 0.7s;
+  width: 280px;
+  height: 90%;
+}
+
+.bg-pricing-card:hover {
+  background-color: hsl(218, 41%, 15%);
+  background-image: radial-gradient(650px circle at 0% 0%,
+      hsl(218, 41%, 35%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%),
+    radial-gradient(1250px circle at 100% 100%,
+      hsl(218, 41%, 45%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%);
+  width: 300px;
+  height: 100%;
+}
+
+.bg-pricing {
+  background-color: hsl(218, 41%, 15%);
+  background-image: radial-gradient(650px circle at 0% 0%,
+      hsl(219, 44%, 33%) 15%,
+      hsl(218, 44%, 26%) 35%,
+      hsl(220, 44%, 18%) 75%,
+      hsl(219, 44%, 14%) 80%,
+      transparent 100%),
+    radial-gradient(1250px circle at 100% 100%,
+      hsl(218, 41%, 44%) 15%,
+      hsl(218, 42%, 28%) 35%,
+      hsl(218, 42%, 20%) 75%,
+      hsl(218, 42%, 20%) 80%,
+      transparent 100%);
+}
+
+.gradient-text {
+  background-color: #021b79;
+  background-image: linear-gradient(180deg, #0ed2f7, 60%, #b2fefa);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+.box-shadow-pricing {
+  box-shadow: rgba(20, 73, 158, 0.17) 0px -23px 25px 0px inset, rgba(24, 40, 96, 0.15) 0px -36px 30px 0px inset,
+    rgba(25, 24, 117, 0.1) 0px -79px 40px 0px inset, rgba(47, 63, 183, 0.06) 0px 2px 1px,
+    rgba(21, 31, 135, 0.09) 0px 4px 2px, rgba(19, 25, 128, 0.09) 0px 8px 4px, rgba(19, 24, 119, 0.09) 0px 16px 8px,
+    rgba(16, 46, 123, 0.09) 0px 32px 16px;
+}
+
+.specific-div>p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-height {
+  @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+}
+
+.inbox-height {
+  @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+}
+
+
+/* third-party libraries CSS */
+
+.tableCheckbox:checked~div span {
+  @apply opacity-100;
+}
+
+.tableCheckbox:checked~div {
+  @apply bg-primary border-primary;
+}
+
+
+
+.flatpickr-day.selected {
+  @apply bg-primary border-primary hover:bg-primary hover:border-primary;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+  @apply fill-primary;
+}
+
+.taskCheckbox:checked~.box span {
+  @apply opacity-100;
+}
+
+.taskCheckbox:checked~p {
+  @apply line-through;
+}
+
+.taskCheckbox:checked~.box {
+  @apply bg-primary border-primary dark:border-primary;
+}
+
+.custom-input-date::-webkit-calendar-picker-indicator {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.custom-input-date-1::-webkit-calendar-picker-indicator {
+  background-image: url("/images/icon/icon-calendar.svg");
+}
+
+.custom-input-date-2::-webkit-calendar-picker-indicator {
+  background-image: url("/images/icon/icon-arrow-down.svg");
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.jvectormap-tip {
+  background-color: #F8FAFC !important;
+  font-family: Satoshi, sans-serif;
+  ;
+}
+
+@layer components {
+  .triangle-top-right {
+    @apply bg-gradient-to-tr from-orange-100 to-orange-600;
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+}
+
+.bg-gradient-login {
+  background: linear-gradient(87deg, #f1692f 0, #ff8c42 100%) !important;
+}
+
+.bg-gradient-orange {
+  background: linear-gradient(87deg, #f1692f 0, #ff8c42 100%) !important;
+}
+
+.trapezoid {
+  width: 100vw;
+  height: 70%;
+
+  clip-path: polygon(0 101%, 0% 100%, 400% calc(100% - 700px), 0 0)
+}
+
+
+@media print {
+  .print-container {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  .input-print {
+    border-width: 0px !important;
+  }
+
+  .print-hidden {
+    display: none;
+  }
+
+  .print-overflow-hidden {
+    overflow: hidden;
+  }
+
+  .payment-top {
+    margin-top: -80px;
+  }
+
+  .input-space {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .ant-modal-content {
+    border-radius: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .ant-modal-close {
+    display: none !important;
+  }
+}
+
+.ant-table-cell {
+  padding: 10px !important;
+}
+
+.ant-input-number-input {
+  text-align: end !important;
+}
+
+.ant-input-number-handler-wrap {
+  display: none !important;
+}
+
+.ant-timeline-item-last {
+  padding-bottom: 0px !important;
+}
+
+@media (max-width: 480px) {
+  .ant-picker-panels {
+    flex-direction: column !important;
+  }
+
+}
+
+.parallelogram {
+  transform: skew(136deg);
+}
+
+/* Thêm thanh cuộn ngang phía trên bảng */
+.custom-scrollbar-top {
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 2px;
+  /* Phải bằng chiều cao của thanh cuộn ngang */
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 5px;
+}
+
+/* ===== TASK BOARD ZENIX THEME ===== */
+:root {
+  --primary: #f1692f;
+  --primary-soft: rgba(241, 105, 47, 0.12);
+}
+
+/* Scrollbar cho board */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+/* Custom thin scrollbar cho components */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+}
+
+/* Card trello */
+.task-card {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+  transition: all .2s ease;
+}
+
+.task-card:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .15);
+  transform: translateY(-2px);
+}
+
+/* List trello */
+.task-list {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
+}
+
+/* Nút cam */
+.btn-primary {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+  background: #ff7d45 !important;
+}
+
+/* Header board */
+.board-header {
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
